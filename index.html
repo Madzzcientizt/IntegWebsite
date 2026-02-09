@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <meta name="description" content="landing page" />
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body id="top">
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="brand">
+            <a href="index.html" style="text-decoration: none;" class="brand-link">
+                <h1 class="head">Dev</h1><img src="log.png" class="logo"></a>
+        </div>
+
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">About Me</a></li>
+                <li class="dropdown">
+                    <input type="checkbox" id="blog-unpack" class="dropdown-toggle">
+                    <label for="blog-unpack" class="dropdown-label">
+Blogs <span class="arrow">▼</span>
+                    </label>
+
+                    <ul class="submenu">
+                        <li><a href="blog1.html">Blog 1</a></li>
+                        <li><a href="blog2.html">Blog 2</a></li>
+                        <li><a href="blog3.html">Blog 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="landing">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Heya, I’m Reales, Sean Kirby E.</h2>
+                <p class="tagline">
+                    A 2nd Yr. Computer Science student documenting my journey in my studies, programming, software engineering, and game design, one project and struggle at a time.
+                </p>
+
+                <p class="author-intro">
+                    I’m the author/owner of this website, where I share blogs about my various experiences as a working student and developer, from conceptualizing game mechanics to personal stories.
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <div class="my-image-container"></div>
+            </div>
+        </section>
+
+        <section class="featured-blogs">
+            <h2 class="section-title">Featured Blogs</h2>
+
+            <div class="blog-grid">
+                <a href="blog1.html" class="blog-card">
+                    <h3>Conceptualizing a Game</h3>
+                    <p>
+                        A breakdown of the challenges we faced while designing mechanics for our software engineering project.
+                    </p>
+                </a>
+
+                <a href="blog2.html" class="blog-card">
+                    <h3>Life as a Working Student</h3>
+                    <p>
+                        Balancing academics, deadlines, and work, lessons learned the hard way.
+                    </p>
+                </a>
+
+                <a href="blog3.html" class="blog-card">
+                    <h3>Future Plans</h3>
+                    <p>
+                        About my dreams and aspirations as well as skills that I need to pick up or polish.
+                    </p>
+                </a>
+
+                <a href="bio.html" class="blog-card">
+                    <h3>About the Author</h3>
+                    <p>
+                        Learn more about the lore of my life.
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <section class="current-work">
+            <h2 class="section-title">Currently Working On</h2>
+            <ul class="work-list">
+                <li>📚 Studying Computer Science</li>
+                <li>🎮 Designing a turn-based game project</li>
+                <li>💻 Improving programming fundamentals</li>
+            </ul>
+        </section>
+        <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

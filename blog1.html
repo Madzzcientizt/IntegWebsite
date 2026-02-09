@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Struggle of Conceptualizing a Game for our Software Engineering Project</title>
+    <meta name="description" content="Blog about the Struggle of Conceptualizing a Game" />
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body id="top">
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="brand">
+            <a href="index.html" style="text-decoration: none;" class="brand-link">
+                <h1 class="head">Dev</h1><img src="log.png" class="logo"></a>
+        </div>
+
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">About Me</a></li>
+                <li class="dropdown">
+                    <input type="checkbox" id="blog-unpack" class="dropdown-toggle">
+                    <label for="blog-unpack" class="dropdown-label">
+Blogs <span class="arrow">▼</span>
+                    </label>
+
+                    <ul class="submenu">
+                        <li><a href="blog1.html">Blog 1</a></li>
+                        <li><a href="blog2.html">Blog 2</a></li>
+                        <li><a href="blog3.html">Blog 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="container">
+            <header class="article-header">
+                <div class="title-group">
+                    <nav class="toc-button">
+                        <details>
+                            <summary aria-label="Table of Contents">☰</summary>
+                            <ul>
+                                <li><a href="#intro">Intro</a></li>
+                                <li><a href="#ideas">Idea Spiral</a></li>
+                                <li><a href="#trim">Trimming the Scope</a></li>
+                                <li><a href="#conclusion">Conclusion</a></li>
+                            </ul>
+                        </details>
+                    </nav>
+
+                    <h1 class="head-article">
+                        The Struggle of Conceptualizing a Game for our Software Engineering Project
+                    </h1>
+                </div>
+
+                <div class="author">
+                    By: Sean Kirby E. Reales 01/13/26
+                </div>
+            </header>
+
+            <section id="intro">
+                <h2>Intro</h2>
+
+                <p class="pblog">
+                    When we started conceptualizing our game <strong>“Poker Knight”</strong> for our software engineering project, I seriously thought the hardest part would be the programming. I imagined late-night debugging and spaghetti code. But surprisingly,
+                    the real struggle happened way before a single line of code was written, inside group chats, Discord, game outline pages, and endless brainstorming. Figuring out what kind of game we actually wanted to build felt like a challenge I
+                    didn’t expect.
+                </p>
+            </section>
+
+            <section id="ideas">
+                <h2>The Idea Spiral</h2>
+                <div class="img-row">
+                    <img src="brainstorming.jpg" class="blogImg" style="height: 500px; width: 800px;">
+                </div>
+                <p class="pblog">
+                    We actually had a ton of ideas for our game at first, only to find out later that it has already been done before and it brought us back to the start. It really is hard to come up with a unique game but I had a struck of inspiration at a random night,
+                    we were tunnel-visioned into wanting to build a game that hasn't been done before so I suggested to combine existing mechanics/concept, which was done by the devs of the <abbr title="Game of the Year">GOTY</abbr>                    <em>Clair Obscur Expedition 33</em>. After that, our ideas really came together in a meahningful manner but encountered a new problem, the scope of the game. Having ideas isn't necessarily bad but having too many can lead to doing
+                    too much. Once the scope issue surfaced, reality suddenly hit us like a cold bucket of water. We were imagining a deck-builder with roguelike progression, character-driven narrative, four regions, bosses, plus unique mechanics based
+                    on poker suits, and at some point I just stared at the game outline that I made, <em>“Wait… are we actually building Slay the Spire?”</em> It was exciting, but at the same time overwhelming because we were still just students with
+                    limited time and zero studio backing. That forced us to confront what was actually feasible versus what simply sounded cool on paper.
+                </p>
+            </section>
+
+            <section id="trim">
+                <h2>Learning to Trim Without Killing the Fun</h2>
+                <div class="img-row">
+                    <img src="map.png" class="blogImg" style="height: 800px; width: 600px;">
+                </div>
+                <div class="blog-block">
+                    What surprised me the most was how much we needed to cut without ruining the identity of our own game. It felt weird because trimming features almost felt like betrayal. Every mechanic had some potential, every idea had a spark, and every team member
+                    had something they wanted to include. But software engineering has this brutal side where you need to choose your battles.
+                    <br><br>We tried to salvage the concept by focusing on what made Poker Knight actually interesting:
+                    <ul>
+                        <li>the poker-themed worldbuilding</li>
+                        <li>the deck-builder combat</li>
+                        <li>the four suit kingdoms</li>
+                        <li>the poker hand mechanics for damage and effects</li>
+                    </ul>
+
+                    Once we framed those as <strong>“core pillars,”</strong> the noise started to die down. We stopped pitching entirely new mechanics every meeting and instead asked: <em>Does this reinforce the pillars or distract from them?</em> That
+                    question alone saved us from collapsing under our own ambition.
+                </div>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusion</h2>
+
+                <p class="pblog">
+                    Looking back, the conceptual phase of Poker Knight taught me something I honestly didn’t expect: the hardest part of building a game isn’t always the code, it’s defining what the game is. Coming up with a concept that is original, fun, doable, and aligned
+                    with everyone’s vision felt like solving a multi-variable equation without a calculator.
+
+                    <br><br>My biggest takeaway is that <strong>creativity needs structure.</strong> You can brainstorm all night, but until you commit to the pillars of your game, the ideas will just float. In the future, I want to start any project
+                    by establishing scope and identity early, because that alone saves both energy and sanity. And who knows, maybe someday Poker Knight won’t just be a school project, but an actual game someone out there might play.
+                </p>
+            </section>
+        </article>
+        <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+    </main>
+</body>
+
+</html>
