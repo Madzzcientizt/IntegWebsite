@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery</title>
+    <meta name="description" content="Gallery of projects and works" />
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body id="top">
+    <header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <div class="brand">
+            <a href="index.html" style="text-decoration: none;" class="brand-link">
+                <h1 class="head">Dev</h1><img src="log.png" class="logo"></a>
+        </div>
+
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">About Me</a></li>
+                <li class="dropdown">
+                    <input type="checkbox" id="blog-unpack" class="dropdown-toggle">
+                    <label for="blog-unpack" class="dropdown-label">
+Blogs <span class="arrow">▼</span>
+                    </label>
+
+                    <ul class="submenu">
+                        <li><a href="blog1.html">Blog 1</a></li>
+                        <li><a href="blog2.html">Blog 2</a></li>
+                        <li><a href="blog3.html">Blog 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="landing">
+
+        <section class="gallery-wrapper">
+
+            <h2 class="section-title">Gallery</h2>
+
+            <input type="radio" name="filter" id="all" checked>
+            <input type="radio" name="filter" id="me">
+            <input type="radio" name="filter" id="family">
+            <input type="radio" name="filter" id="work">
+            <input type="radio" name="filter" id="school">
+            <input type="radio" name="filter" id="friends">
+
+            <div class="filter-controls">
+                <label for="all">All</label>
+                <label for="me">Me</label>
+                <label for="family">Family</label>
+                <label for="work">Work</label>
+                <label for="school">School</label>
+                <label for="friends">Friends</label>
+            </div>
+
+            <div class="masonry">
+
+                <a href="#img1" class="item me">
+                    <img src="me.jpg">
+                </a>
+
+                <a href="#img2" class="item me">
+                    <img src="REALES.jpg">
+                </a>
+
+                <a href="#img3" class="item me work">
+                    <img src="workCafe.jpg">
+                </a>
+
+                <a href="#img4" class="item me">
+                    <img src="me2.jpg">
+                </a>
+
+                <a href="#img5" class="item me">
+                    <img src="me3.jpg">
+                </a>
+
+                <a href="#img6" class="item family">
+                    <img src="fam.jpg">
+                </a>
+
+                <a href="#img7" class="item family">
+                    <img src="fam2.jpg">
+                </a>
+
+                <a href="#img8" class="item family">
+                    <img src="fam3.jpg">
+                </a>
+
+                <a href="#img9" class="item family">
+                    <img src="fam4.jpg">
+                </a>
+
+                <a href="#img10" class="item family">
+                    <img src="triofam.jpg">
+                </a>
+
+                <a href="#img11" class="item work">
+                    <img src="work.jpg">
+                </a>
+
+                <a href="#img12" class="item work">
+                    <img src="work2.jpg">
+                </a>
+
+                <a href="#img13" class="item work">
+                    <img src="twoWork.jpg">
+                </a>
+
+                <a href="#img14" class="item work">
+                    <img src="training.jpg">
+                </a>
+
+                <a href="#img15" class="item work">
+                    <img src="work3.jpg">
+                </a>
+
+                <a href="#img16" class="item work">
+                    <img src="reward.jpg">
+                </a>
+
+                <a href="#img17" class="item school">
+                    <img src="map.png">
+                </a>
+
+                <a href="#img18" class="item school">
+                    <img src="college.jpg">
+                </a>
+
+                <a href="#img19" class="item school">
+                    <img src="godot.png">
+                </a>
+
+                <a href="#img20" class="item school">
+                    <img src="alarm.jpg">
+                </a>
+
+                <a href="#img21" class="item school">
+                    <img src="skills.png">
+                </a>
+
+                <a href="#img22" class="item me">
+                    <img src="cost.jpg">
+                </a>
+
+                <a href="#img23" class="item friends">
+                    <img src="friends.jpg">
+                </a>
+
+                <a href="#img24" class="item friends">
+                    <img src="friends2.jpg">
+                </a>
+
+                <a href="#img25" class="item friends">
+                    <img src="friends3.jpg">
+                </a>
+
+                <a href="#img26" class="item friends">
+                    <img src="friends4.jpg">
+                </a>
+
+                <a href="#img27" class="item friends">
+                    <img src="friends5.jpg">
+                </a>
+
+                <a href="#img28" class="item friends">
+                    <img src="friends6.jpg">
+                </a>
+
+                <a href="#img29" class="item friends">
+                    <img src="friends7.jpg">
+                </a>
+
+                <a href="#img30" class="item friends">
+                    <img src="friends8.jpg">
+                </a>
+
+                <a href="#img31" class="item school">
+                    <img src="school.jpg">
+                </a>
+
+                <a href="#img32" class="item school">
+                    <img src="brainstorming.jpg">
+                </a>
+
+                <a href="#img33" class="item school">
+                    <img src="recognition.jpg">
+                </a>
+            </div>
+
+        </section>
+
+
+
+        <div id="img1" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="me.jpg">
+        </div>
+
+        <div id="img2" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="REALES.jpg">
+        </div>
+
+        <div id="img3" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="workCafe.jpg">
+        </div>
+
+        <div id="img4" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="me2.jpg">
+        </div>
+
+        <div id="img5" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="me3.jpg">
+        </div>
+
+        <div id="img6" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="fam.jpg">
+        </div>
+
+        <div id="img7" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="fam2.jpg">
+        </div>
+
+        <div id="img8" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="fam3.jpg">
+        </div>
+
+        <div id="img9" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="fam4.jpg">
+        </div>
+
+        <div id="img10" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="triofam.jpg">
+        </div>
+
+        <div id="img11" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="work.jpg">
+        </div>
+
+        <div id="img12" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="work2.jpg">
+        </div>
+
+        <div id="img13" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="twoWork.jpg">
+        </div>
+
+        <div id="img14" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="training.jpg">
+        </div>
+
+        <div id="img15" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="work3.jpg">
+        </div>
+
+        <div id="img16" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="reward.jpg">
+        </div>
+
+        <div id="img17" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="map.png">
+        </div>
+
+        <div id="img18" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="college.jpg">
+        </div>
+
+        <div id="img19" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="godot.png">
+        </div>
+
+        <div id="img20" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="alarm.jpg">
+        </div>
+
+        <div id="img21" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="skills.png">
+        </div>
+
+        <div id="img22" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="cost.jpg">
+        </div>
+
+        <div id="img23" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends.jpg">
+        </div>
+
+        <div id="img24" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends2.jpg">
+        </div>
+
+        <div id="img25" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends3.jpg">
+        </div>
+
+        <div id="img26" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends4.jpg">
+        </div>
+
+        <div id="img27" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends5.jpg">
+        </div>
+
+        <div id="img28" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends6.jpg">
+        </div>
+
+        <div id="img29" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends7.jpg">
+        </div>
+
+        <div id="img30" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="friends8.jpg">
+        </div>
+
+        <div id="img31" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="school.jpg">
+        </div>
+
+        <div id="img32" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="brainstorming.jpg">
+        </div>
+
+        <div id="img33" class="lightbox">
+            <a href="#" class="close"></a>
+            <img src="recognition.jpg">
+        </div>
+
+        <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+    </main>
+
+</body>
+
+</html>
