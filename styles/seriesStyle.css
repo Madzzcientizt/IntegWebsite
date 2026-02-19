@@ -176,3 +176,69 @@
 .film-btn.alt {
     background: var(--color-forest-green);
 }
+
+#tv-all:checked~.films-header .selected-text::after {
+    content: "ALL";
+}
+
+#tv-horror:checked~.films-header .selected-text::after {
+    content: "HORROR";
+}
+
+#tv-drama:checked~.films-header .selected-text::after {
+    content: "DRAMA";
+}
+
+#tv-thriller:checked~.films-header .selected-text::after {
+    content: "THRILLER";
+}
+
+#tv-psych:checked~.films-header .selected-text::after {
+    content: "PSYCHOLOGICAL";
+}
+
+
+/* =========================
+   TV FILTER LOGIC
+   ========================= */
+
+
+/* Hide radios */
+
+.films input[name="tv-genre"] {
+    display: none;
+}
+
+
+/* Default show */
+
+.film-card {
+    display: block;
+}
+
+
+/* Hide all when specific selected */
+
+#tv-horror:checked~.film-genre .film-card,
+#tv-drama:checked~.film-genre .film-card,
+#tv-thriller:checked~.film-genre .film-card,
+#tv-psych:checked~.film-genre .film-card {
+    display: none;
+}
+
+
+/* Show matching */
+
+#tv-horror:checked~.film-genre .film-card[data-genre~="horror"],
+#tv-drama:checked~.film-genre .film-card[data-genre~="drama"],
+#tv-thriller:checked~.film-genre .film-card[data-genre~="thriller"],
+#tv-psych:checked~.film-genre .film-card[data-genre~="psychological"] {
+    display: block;
+}
+
+
+/* ALL */
+
+#tv-all:checked~.film-genre .film-card {
+    display: block;
+}

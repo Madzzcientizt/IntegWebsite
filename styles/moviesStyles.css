@@ -176,3 +176,75 @@
 .film-btn.alt {
     background: var(--color-forest-green);
 }
+
+#f-all:checked~.films-header .selected-text::after {
+    content: "ALL";
+}
+
+#f-thriller:checked~.films-header .selected-text::after {
+    content: "THRILLER";
+}
+
+#f-horror:checked~.films-header .selected-text::after {
+    content: "HORROR";
+}
+
+#f-war:checked~.films-header .selected-text::after {
+    content: "WAR";
+}
+
+#f-scifi:checked~.films-header .selected-text::after {
+    content: "SCI-FI";
+}
+
+#f-action:checked~.films-header .selected-text::after {
+    content: "ACTION";
+}
+
+
+/* =========================
+   FILM FILTER LOGIC
+   ========================= */
+
+
+/* Hide radios */
+
+.films input[type="radio"] {
+    display: none;
+}
+
+
+/* Default show */
+
+.film-card {
+    display: block;
+}
+
+
+/* Hide all when specific selected */
+
+#f-thriller:checked~.film-genre .film-card,
+#f-horror:checked~.film-genre .film-card,
+#f-war:checked~.film-genre .film-card,
+#f-scifi:checked~.film-genre .film-card,
+#f-action:checked~.film-genre .film-card {
+    display: none;
+}
+
+
+/* Show matching */
+
+#f-thriller:checked~.film-genre .film-card[data-genre~="thriller"],
+#f-horror:checked~.film-genre .film-card[data-genre~="horror"],
+#f-war:checked~.film-genre .film-card[data-genre~="war"],
+#f-scifi:checked~.film-genre .film-card[data-genre~="scifi"],
+#f-action:checked~.film-genre .film-card[data-genre~="action"] {
+    display: block;
+}
+
+
+/* ALL */
+
+#f-all:checked~.film-genre .film-card {
+    display: block;
+}
