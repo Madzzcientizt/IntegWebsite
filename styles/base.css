@@ -230,5 +230,6 @@ body.home .logo-link {
     margin-top: 80px;
     padding: 25px;
     text-align: center;
+    color: var(--color-white);
     background: var(--color-forest-green);
 }
