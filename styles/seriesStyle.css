@@ -1,0 +1,178 @@
+/* =====================================
+   MOVIES PAGE — PERSONA FILM GRID
+===================================== */
+
+.films {
+    max-width: 1200px;
+    margin: 60px auto 100px;
+    padding: 0 20px;
+}
+
+
+/* =========================
+   FILMS HEADER
+========================= */
+
+.films-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 50px;
+}
+
+.films-title {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    color: var(--color-deep-hunter);
+    margin: 0;
+    border-left: 8px solid var(--color-gold);
+    padding-left: 15px;
+}
+
+
+/* =========================
+   GENRE SECTION
+========================= */
+
+.film-genre {
+    margin-bottom: 80px;
+}
+
+
+/* =========================
+   FILM GRID (3 PER ROW)
+========================= */
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+
+/* =========================
+   FILM CARD
+========================= */
+
+.film-card {
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    border-top: 6px solid var(--color-gold);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    transition: .3s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
+}
+
+
+/* =========================
+   POSTER
+========================= */
+
+.film-poster-wrap {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: var(--color-deep-hunter);
+}
+
+.film-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s ease;
+}
+
+.film-card:hover .film-poster {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.film-content {
+    padding: 22px 22px 30px;
+}
+
+.film-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--color-deep-hunter);
+}
+
+
+/* =========================
+   TAGS (GENRE + YEAR)
+========================= */
+
+.film-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.film-tags span {
+    background: var(--color-forest-green);
+    color: var(--color-white);
+    font-size: 11px;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   META INFO
+========================= */
+
+.film-director,
+.film-cast {
+    font-size: 13px;
+    color: var(--color-forest-green);
+    margin-bottom: 6px;
+}
+
+.film-synopsis {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 12px 0 18px;
+    color: #333;
+}
+
+.film-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.film-btn {
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    background: var(--color-deep-hunter);
+    color: var(--color-gold);
+    border: 2px solid var(--color-gold);
+    transition: 0.25s ease;
+}
+
+.film-btn:hover {
+    background: var(--color-gold);
+    color: var(--color-deep-hunter);
+    transform: translateY(-2px);
+}
+
+
+/* optional visual distinction */
+
+.film-btn.alt {
+    background: var(--color-forest-green);
+}
