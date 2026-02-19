@@ -113,7 +113,7 @@
                         </p>
 
                         <div class="film-links">
-                            <a href="https://www.youtube.com/watch?v=5KvMLgeh3jA" target="_blank" rel="noopener" class="film-btn alt">Watch My Fav Clip</a>
+                            <a href="#from-video" class="film-btn alt">Watch My Fav Clip</a>
                         </div>
                     </div>
                 </article>
@@ -147,7 +147,7 @@
                         </p>
 
                         <div class="film-links">
-                            <a href="https://youtu.be/Pi4vYtOSXjA" target="_blank" rel="noopener" class="film-btn alt">Watch My Fav Clip</a>
+                            <a href="#lincolnlawyer-video" class="film-btn alt">Watch My Fav Clip</a>
                         </div>
                     </div>
                 </article>
@@ -181,7 +181,7 @@
                         </p>
 
                         <div class="film-links">
-                            <a href="https://youtu.be/3L4dLI_74P0" target="_blank" rel="noopener" class="film-btn alt">Watch My Fav Clip</a>
+                            <a href="#severance-video" class="film-btn alt">Watch My Fav Clip</a>
                         </div>
                     </div>
                 </article>
@@ -193,6 +193,45 @@
         <p>© 2026 By Reales, Sean Kirby E. aka Madz</p>
     </footer>
 
+    <div id="from-video" class="video-modal">
+        <div class="video-content">
+            <a href="#" class="close-btn">✕</a>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/5KvMLgeh3jA?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="lincolnlawyer-video" class="video-modal">
+        <div class="video-content">
+            <a href="#" class="close-btn">✕</a>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/j8bglppCz8c?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="severance-video" class="video-modal">
+        <div class="video-content">
+            <a href="#" class="close-btn">✕</a>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/W_-4cBaXTWs?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        const modals = document.querySelectorAll(".video-modal");
+
+        function stopVideo(iframe) {
+            iframe.contentWindow.postMessage(
+                '{"event":"command","func":"stopVideo","args":""}',
+                'https://www.youtube.com'
+            );
+        }
+
+        function stopAllVideos() {
+            document.querySelectorAll(".video-frame").forEach(iframe => {
+                stopVideo(iframe);
+            });
+        }
+
+        window.addEventListener("hashchange", stopAllVideos);
+    </script>
 </body>
 
 </html>

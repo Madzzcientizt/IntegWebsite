@@ -115,7 +115,7 @@
                         </p>
 
                         <div class="film-links">
-                            <a href="https://youtu.be/C4Rrj5eRdy0" target="_blank" rel="noopener" class="film-btn alt">Watch My Fav Clip</a>
+                            <a href="#prestige-video" class="film-btn alt">Watch My Fav Clip</a>
                         </div>
                     </div>
                 </article>
@@ -149,7 +149,7 @@
                         </p>
 
                         <div class="film-links">
-                            <a href="https://www.youtube.com/watch?v=w0Z44BIDPPc" target="_blank" rel="noopener" class="film-btn alt">Watch My Fav Clip</a>
+                            <a href="#thing-video" class="film-btn alt">Watch My Fav Clip</a>
                         </div>
                     </div>
                 </article>
@@ -183,7 +183,7 @@
                         </p>
 
                         <div class="film-links">
-                            <a href="https://www.youtube.com/watch?v=coS2CdNd7Io" target="_blank" rel="noopener" class="film-btn alt">Watch My Fav Clip</a>
+                            <a href="#basterds-video" class="film-btn alt">Watch My Fav Clip</a>
                         </div>
                     </div>
                 </article>
@@ -195,6 +195,45 @@
         <p>© 2026 By Reales, Sean Kirby E. aka Madz</p>
     </footer>
 
+    <div id="prestige-video" class="video-modal">
+        <div class="video-content">
+            <a href="#" class="close-btn">✕</a>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/C4Rrj5eRdy0?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="thing-video" class="video-modal">
+        <div class="video-content">
+            <a href="#" class="close-btn">✕</a>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/w0Z44BIDPPc?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="basterds-video" class="video-modal">
+        <div class="video-content">
+            <a href="#" class="close-btn">✕</a>
+            <iframe class="video-frame" src="https://www.youtube.com/embed/coS2CdNd7Io?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        const modals = document.querySelectorAll(".video-modal");
+
+        function stopVideo(iframe) {
+            iframe.contentWindow.postMessage(
+                '{"event":"command","func":"stopVideo","args":""}',
+                'https://www.youtube.com'
+            );
+        }
+
+        function stopAllVideos() {
+            document.querySelectorAll(".video-frame").forEach(iframe => {
+                stopVideo(iframe);
+            });
+        }
+
+        window.addEventListener("hashchange", stopAllVideos);
+    </script>
 </body>
 
 </html>
