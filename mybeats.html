@@ -50,22 +50,20 @@
         </div>
     </header>
 
-    <main class="beats">
+    <div class="beats">
+
+        <input type="radio" name="genre" id="g-all" checked>
+        <input type="radio" name="genre" id="g-vgo">
+        <input type="radio" name="genre" id="g-tso">
+        <input type="radio" name="genre" id="g-rock">
+        <input type="radio" name="genre" id="g-metal">
+        <input type="radio" name="genre" id="g-alt">
 
         <div class="beats-header">
-
             <h2 class="beats-title">My Beats</h2>
 
             <section class="music-filter">
-
                 <div class="genre-dropdown">
-
-                    <input type="radio" name="genre" id="g-all" checked>
-                    <input type="radio" name="genre" id="g-vgo">
-                    <input type="radio" name="genre" id="g-tso">
-                    <input type="radio" name="genre" id="g-rock">
-                    <input type="radio" name="genre" id="g-metal">
-                    <input type="radio" name="genre" id="g-alt">
 
                     <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
 
@@ -84,17 +82,11 @@
                     </div>
 
                 </div>
-
             </section>
-
         </div>
 
-
-
-        <div class="category-indicator"></div>
-
         <div class="track-list">
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona3.png" class="cover">
 
@@ -116,7 +108,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona3.png" class="cover">
 
@@ -138,7 +130,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona3.png" class="cover">
 
@@ -160,7 +152,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona3.png" class="cover">
 
@@ -182,7 +174,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona3.png" class="cover">
 
@@ -204,7 +196,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona5.jpg" class="cover">
 
@@ -226,7 +218,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona5.jpg" class="cover">
 
@@ -248,7 +240,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona5.jpg" class="cover">
 
@@ -270,7 +262,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona5.jpg" class="cover">
 
@@ -292,7 +284,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo">
                 <summary class="track-header">
                     <img src="images/persona5.jpg" class="cover">
 
@@ -314,7 +306,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="alt">
                 <summary class="track-header">
                     <img src="images/linewithoutahook.jpg" class="cover">
 
@@ -323,7 +315,7 @@
                         <p class="artist">Ricky Montgomery • 2020</p>
 
                         <div class="tags">
-                            <span>POP</span>
+                            <span>ALT</span>
                         </div>
                     </div>
                 </summary>
@@ -335,7 +327,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo rock">
                 <summary class="track-header">
                     <img src="images/DMC5_Devil_Trigger.jpg" class="cover">
 
@@ -357,7 +349,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="rock">
                 <summary class="track-header">
                     <img src="images/AMERICANIDIOT.jpg" class="cover">
 
@@ -378,7 +370,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="rock">
                 <summary class="track-header">
                     <img src="images/greenday.jpg" class="cover">
 
@@ -399,7 +391,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="rock">
                 <summary class="track-header">
                     <img src="images/21GUNS.jpg" class="cover">
 
@@ -420,7 +412,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="rock">
                 <summary class="track-header">
                     <img src="images/greenday2.jpg" class="cover">
 
@@ -441,7 +433,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="rock">
                 <summary class="track-header">
                     <img src="images/The_calling_wherever_you.png" class="cover">
 
@@ -462,7 +454,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="alt rock">
                 <summary class="track-header">
                     <img src="images/letdown.jpg" class="cover">
 
@@ -471,6 +463,7 @@
                         <p class="artist">Radiohead • 1997</p>
 
                         <div class="tags">
+                            <span>ALT</span>
                             <span>ROCK</span>
                         </div>
                     </div>
@@ -483,7 +476,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="alt">
                 <summary class="track-header">
                     <img src="images/about you.jpg" class="cover">
 
@@ -492,7 +485,7 @@
                         <p class="artist">The 1975 • 2022</p>
 
                         <div class="tags">
-                            <span>ROCK</span>
+                            <span>ALT</span>
                         </div>
                     </div>
                 </summary>
@@ -504,7 +497,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo metal">
                 <summary class="track-header">
                     <img src="images/Bury_the_Light_cover.jpg" class="cover">
 
@@ -526,7 +519,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo metal">
                 <summary class="track-header">
                     <img src="images/MGRR.jpg" class="cover">
 
@@ -548,7 +541,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo metal">
                 <summary class="track-header">
                     <img src="images/MGRR.jpg" class="cover">
 
@@ -570,7 +563,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="vgo metal">
                 <summary class="track-header">
                     <img src="images/HEAVYISTHECROWN.jpg" class="cover">
 
@@ -592,7 +585,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="metal">
                 <summary class="track-header">
                     <img src="images/SYSTEMOFADOWN.jpg" class="cover">
 
@@ -613,7 +606,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="metal">
                 <summary class="track-header">
                     <img src="images/SYSTEMOFADOWN.jpg" class="cover">
 
@@ -634,7 +627,7 @@
                 </div>
             </details>
 
-            <details class="track">
+            <details class="track" data-genre="tso">
                 <summary class="track-header">
                     <img src="images/cyberpunk(stayatyourhouse).jpg" class="cover">
 
@@ -655,7 +648,7 @@
                 </div>
             </details>
         </div>
-    </main>
+    </div>
 
     <footer class="footer">
         <p>© 2026 My Campus</p>
