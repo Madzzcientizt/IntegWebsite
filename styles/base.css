@@ -40,6 +40,12 @@ body::before {
     z-index: -1;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 /* GLOBAL FAINT GREEN ACCENT */
 
@@ -85,6 +91,7 @@ body::after {
 .header-inner {
     position: relative;
     max-width: 1200px;
+    height: 100%;
     margin: auto;
     padding: 0 40px;
     display: flex;
@@ -101,6 +108,15 @@ body::after {
     color: var(--color-gold);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     transform: rotate(-2deg);
+}
+
+.logo-link {
+    text-decoration: none;
+    display: block;
+}
+
+body.home .logo-link {
+    pointer-events: none;
 }
 
 .nav {

@@ -1,0 +1,330 @@
+/* =========================
+   GALLERY LAYOUT
+   ========================= */
+
+.gallery-wrapper {
+    margin-top: 60px;
+}
+
+.gallery-wrapper input {
+    display: none;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+main {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+/* =========================
+   PERSONA DROPDOWN (FILMS STYLE)
+   ========================= */
+
+.genre-dropdown {
+    position: relative;
+    width: 240px;
+    font-family: var(--font-heading);
+    z-index: 1000;
+}
+
+
+/* Hide radios */
+
+.genre-dropdown input[type="radio"] {
+    display: none;
+}
+
+
+/* Hide toggle */
+
+.dropdown-toggle {
+    display: none;
+}
+
+
+/* Selected display */
+
+.dropdown-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px;
+    border: 3px solid var(--color-forest-green);
+    background: var(--color-white);
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.25s ease;
+    /* REMOVE SLANT */
+    clip-path: none;
+    border-radius: 0;
+    /* sharp corners like film page */
+}
+
+.dropdown-selected:hover {
+    background: var(--color-pale-sage);
+}
+
+.arrow {
+    font-size: 14px;
+}
+
+
+/* Dropdown options */
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    border: 3px solid var(--color-forest-green);
+    border-top: none;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-options label {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dropdown-options label:hover {
+    background: var(--color-pale-sage);
+}
+
+
+/* Open dropdown */
+
+.dropdown-toggle:checked~.dropdown-options {
+    display: flex;
+}
+
+
+/* =========================
+   Dynamic Selected Text
+   ========================= */
+
+#all:checked~.films-header .selected-text::after {
+    content: "ALL";
+}
+
+#me:checked~.films-header .selected-text::after {
+    content: "ME";
+}
+
+#family:checked~.films-header .selected-text::after {
+    content: "FAMILY";
+}
+
+#work:checked~.films-header .selected-text::after {
+    content: "WORK";
+}
+
+#school:checked~.films-header .selected-text::after {
+    content: "SCHOOL";
+}
+
+#friends:checked~.films-header .selected-text::after {
+    content: "FRIENDS";
+}
+
+
+/* =========================
+   MASONRY GRID
+   ========================= */
+
+.masonry {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.item {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+
+/* Hover effect */
+
+.item:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.7) blur(1px);
+}
+
+
+/* Overlay */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay-text {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   FILTER LOGIC
+   ========================= */
+
+
+/* Show all */
+
+#all:checked~.masonry .item {
+    display: inline-block;
+}
+
+
+/* Me */
+
+#me:checked~.masonry .item {
+    display: none;
+}
+
+#me:checked~.masonry .me {
+    display: inline-block;
+}
+
+
+/* Family */
+
+#family:checked~.masonry .item {
+    display: none;
+}
+
+#family:checked~.masonry .family {
+    display: inline-block;
+}
+
+
+/* Work */
+
+#work:checked~.masonry .item {
+    display: none;
+}
+
+#work:checked~.masonry .work {
+    display: inline-block;
+}
+
+
+/* School */
+
+#school:checked~.masonry .item {
+    display: none;
+}
+
+#school:checked~.masonry .school {
+    display: inline-block;
+}
+
+
+/* Friends */
+
+#friends:checked~.masonry .item {
+    display: none;
+}
+
+#friends:checked~.masonry .friends {
+    display: inline-block;
+}
+
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border: 6px solid var(--color-gold);
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox .close {
+    position: absolute;
+    inset: 0;
+    cursor: default;
+}
+
+
+/* =========================
+   BACK TO TOP
+   ========================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-forest-green);
+    color: var(--color-white);
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: var(--color-deep-hunter);
+    color: var(--color-gold);
+    transform: translateY(-3px);
+}

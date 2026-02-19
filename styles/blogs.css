@@ -1,0 +1,260 @@
+/* =========================
+   BLOG PAGE — PERSONA STYLE
+   ========================= */
+
+.blog-page {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+
+/* HEADER LAYOUT */
+
+.blog-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.blog-top h1 {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    color: var(--color-deep-hunter);
+}
+
+.blog-meta {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    font-family: var(--font-body);
+    letter-spacing: 2px;
+    color: var(--color-forest-green);
+}
+
+
+/* SECTION SPACING */
+
+.blog-section {
+    position: relative;
+    margin-bottom: 100px;
+    z-index: 1;
+}
+
+
+/* FRAME */
+
+.blog-frame {
+    background: linear-gradient( 135deg, var(--color-deep-hunter), var(--color-forest-green));
+    border: 5px solid var(--color-gold);
+    padding: 50px;
+    transform: rotate(-1.5deg);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 2;
+}
+
+.blog-frame ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+.blog-frame.alt {
+    transform: rotate(1.5deg);
+}
+
+.blog-frame>* {
+    transform: rotate(1.5deg);
+}
+
+.blog-frame.alt>* {
+    transform: rotate(-1.5deg);
+}
+
+
+/* HEADINGS */
+
+.blog-frame h2 {
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+/* TEXT */
+
+.blog-frame p,
+.blog-block {
+    font-family: var(--font-body);
+    color: var(--color-white);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+
+/* IMAGES */
+
+.blog-images {
+    margin-bottom: 25px;
+}
+
+.blog-images img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border: 3px solid var(--color-gold);
+}
+
+
+/* ONLY for sections with two images */
+
+.blog-images.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.blog-images.two-col img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+
+/* subtle texture */
+
+.blog-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: .3;
+    pointer-events: none;
+}
+
+
+/* =========================
+   BLOG DROPDOWN (BEATS STYLE)
+   ========================= */
+
+.blog-dropdown {
+    position: relative;
+    min-width: 220px;
+}
+
+.blog-toggle {
+    display: none;
+}
+
+.blog-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    background: var(--color-white);
+    border: 3px solid var(--color-forest-green);
+    color: var(--color-deep-hunter);
+    cursor: pointer;
+}
+
+.blog-selected:hover {
+    background: var(--color-pale-sage);
+}
+
+.blog-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-white);
+    border: 3px solid var(--color-forest-green);
+    border-top: none;
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.blog-options a {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--color-deep-hunter);
+    font-family: var(--font-body);
+}
+
+.blog-options a:hover {
+    background: var(--color-pale-sage);
+}
+
+.blog-toggle:checked~.blog-options {
+    display: flex;
+}
+
+.blog-section.no-bridge::after {
+    display: none;
+}
+
+
+/* =========================
+   BLOG CONNECTOR — VARIANT A
+   ========================= */
+
+.blog-section::after {
+    content: "";
+    position: absolute;
+    bottom: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 340px;
+    background: var(--color-gold);
+    clip-path: polygon( 35% 0%, 60% 0%, 70% 35%, 90% 35%, 100% 100%, 70% 100%, 55% 60%, 30% 60%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* =========================
+   BLOG CONNECTOR — VARIANT B
+   ========================= */
+
+.blog-section.alt-bridge::after {
+    content: "";
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 280px;
+    background: var(--color-gold);
+    clip-path: polygon( 30% 0%, 80% 0%, 65% 30%, 95% 60%, 75% 100%, 30% 100%, 45% 65%, 15% 40%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* =========================
+   BLOG CONNECTOR — VARIANT C
+   ========================= */
+
+.blog-section.arrow-bridge::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 750px;
+    height: 300px;
+    background: var(--color-gold);
+    clip-path: polygon( 25% 0%, 75% 0%, /* wide attach */
+    60% 35%, 85% 35%, /* right wing */
+    50% 100%, /* sharp bottom tip */
+    15% 35%, 40% 35%/* left wing */
+    );
+    z-index: -1;
+    pointer-events: none;
+}
