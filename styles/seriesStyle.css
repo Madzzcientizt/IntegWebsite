@@ -141,7 +141,7 @@
 
 .film-btn:hover {
     background: var(--color-gold);
-    color: var(--color-deep-hunter);
+    color: var(--color-white);
     transform: translateY(-2px);
 }
 
