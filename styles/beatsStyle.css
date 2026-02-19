@@ -1,9 +1,4 @@
-/* ===== BEATS PAGE ===== */
-
-
-/* =========================
-   BEATS PAGE — PERSONA STYLE
-   ========================= */
+/* BEATS PAGE */
 
 
 /* Header layout */
@@ -65,9 +60,6 @@
     transform: translateY(-3px);
 }
 
-
-/* clickable header */
-
 .track::before,
 .track::after,
 .track-body::after {
@@ -91,15 +83,9 @@
     pointer-events: none;
 }
 
-
-/* remove default arrow */
-
 .track summary::-webkit-details-marker {
     display: none;
 }
-
-
-/* fake vinyl disc */
 
 .track::before {
     content: "";
@@ -209,9 +195,6 @@
     transform: scale(1.04);
 }
 
-
-/* persona open effect */
-
 .track[open] {
     border-left: 8px solid var(--color-gold);
     box-shadow: 0 10px 28px rgba(0, 0, 0, .15);
@@ -236,11 +219,6 @@
     pointer-events: none;
 }
 
-
-/* =========================
-   PERSONA GENRE DROPDOWN
-   ========================= */
-
 .music-filter {
     margin-bottom: 35px;
 }
@@ -252,16 +230,10 @@
     transform: translateY(-10px);
 }
 
-
-/* Hide radios + toggle */
-
-.genre-dropdown input[type="radio"],
+.beats input[type="radio"],
 .dropdown-toggle {
     display: none;
 }
-
-
-/* Selected display */
 
 .dropdown-selected {
     height: 52px;
@@ -282,22 +254,13 @@
     background: var(--color-pale-sage);
 }
 
-
-/* Arrow */
-
 .arrow {
     transition: .2s ease;
 }
 
-
-/* Rotate arrow when open */
-
 .dropdown-toggle:checked+.dropdown-selected .arrow {
     transform: rotate(180deg);
 }
-
-
-/* Dropdown menu */
 
 .dropdown-options {
     position: absolute;
@@ -312,15 +275,9 @@
     z-index: 100;
 }
 
-
-/* Show menu */
-
 .dropdown-toggle:checked~.dropdown-options {
     display: flex;
 }
-
-
-/* Option styles */
 
 .dropdown-options label {
     padding: 12px 18px;
@@ -332,29 +289,52 @@
     background: var(--color-pale-sage);
 }
 
-
-/* Active selection display text */
-
-#g-all:checked~.dropdown-selected .selected-text::after {
+#g-all:checked~.beats-header .dropdown-selected .selected-text::after {
     content: "ALL";
 }
 
-#g-vgo:checked~.dropdown-selected .selected-text::after {
+#g-vgo:checked~.beats-header .dropdown-selected .selected-text::after {
     content: "VIDEO GAME OST";
 }
 
-#g-tso:checked~.dropdown-selected .selected-text::after {
+#g-tso:checked~.beats-header .dropdown-selected .selected-text::after {
     content: "TV SERIES OST";
 }
 
-#g-rock:checked~.dropdown-selected .selected-text::after {
+#g-rock:checked~.beats-header .dropdown-selected .selected-text::after {
     content: "ROCK";
 }
 
-#g-metal:checked~.dropdown-selected .selected-text::after {
+#g-metal:checked~.beats-header .dropdown-selected .selected-text::after {
     content: "METAL";
 }
 
-#g-alt:checked~.dropdown-selected .selected-text::after {
+#g-alt:checked~.beats-header .dropdown-selected .selected-text::after {
     content: "ALT / INDIE";
+}
+
+
+/* GENRE FILTER */
+
+.track {
+    display: block;
+}
+
+#g-vgo:checked~.track-list .track,
+#g-tso:checked~.track-list .track,
+#g-rock:checked~.track-list .track,
+#g-metal:checked~.track-list .track,
+#g-alt:checked~.track-list .track {
+    display: none;
+}
+
+
+/* Show matching genre */
+
+#g-vgo:checked~.track-list .track[data-genre~="vgo"],
+#g-tso:checked~.track-list .track[data-genre~="tso"],
+#g-rock:checked~.track-list .track[data-genre~="rock"],
+#g-metal:checked~.track-list .track[data-genre~="metal"],
+#g-alt:checked~.track-list .track[data-genre~="alt"] {
+    display: block;
 }
