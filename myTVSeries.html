@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>[ MY FAV TV SERIES ]</title>
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/moviesStyles.css">
     <link rel="stylesheet" href="styles/beatsStyle.css">
+    <link rel="stylesheet" href="styles/seriesStyle.css">
 </head>
 
 <body>
@@ -47,40 +47,36 @@
         </div>
     </header>
 
-    <main class="films">
+    <div class="films">
+
+        <input type="radio" name="tv-genre" id="tv-all" checked>
+        <input type="radio" name="tv-genre" id="tv-horror">
+        <input type="radio" name="tv-genre" id="tv-drama">
+        <input type="radio" name="tv-genre" id="tv-thriller">
+        <input type="radio" name="tv-genre" id="tv-psych">
 
         <div class="films-header">
-            <h2 class="films-title">My Films</h2>
+            <h2 class="films-title">My Favorite TV Series</h2>
 
             <section class="music-filter">
-
                 <div class="genre-dropdown">
 
-                    <input type="radio" name="genre" id="g-all" checked>
-                    <input type="radio" name="genre" id="g-vgo">
-                    <input type="radio" name="genre" id="g-tso">
-                    <input type="radio" name="genre" id="g-rock">
-                    <input type="radio" name="genre" id="g-metal">
-                    <input type="radio" name="genre" id="g-alt">
+                    <input type="checkbox" id="dropdown-toggle-tv" class="dropdown-toggle">
 
-                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
-
-                    <label for="dropdown-toggle" class="dropdown-selected">
+                    <label for="dropdown-toggle-tv" class="dropdown-selected">
                     <span class="selected-text"></span>
                     <span class="arrow">▾</span>
                 </label>
 
                     <div class="dropdown-options">
-                        <label for="g-all">ALL</label>
-                        <label for="g-vgo">VIDEO GAME OST</label>
-                        <label for="g-tso">TV SERIES OST</label>
-                        <label for="g-rock">ROCK</label>
-                        <label for="g-metal">METAL</label>
-                        <label for="g-alt">ALT / INDIE</label>
+                        <label for="tv-all">ALL</label>
+                        <label for="tv-horror">HORROR</label>
+                        <label for="tv-drama">DRAMA</label>
+                        <label for="tv-thriller">THRILLER</label>
+                        <label for="tv-psych">PSYCHOLOGICAL</label>
                     </div>
 
                 </div>
-
             </section>
         </div>
 
@@ -88,7 +84,7 @@
 
             <div class="film-grid">
 
-                <article class="film-card">
+                <article class="film-card" data-genre="horror">
 
                     <div class="film-poster-wrap">
                         <img src="images/from.jpg" class="film-poster">
@@ -122,7 +118,7 @@
                     </div>
                 </article>
 
-                <article class="film-card">
+                <article class="film-card" data-genre="drama">
 
                     <div class="film-poster-wrap">
                         <img src="images/lincoln lawyer.jpg" class="film-poster">
@@ -156,7 +152,7 @@
                     </div>
                 </article>
 
-                <article class="film-card">
+                <article class="film-card" data-genre="thriller psychological">
 
                     <div class="film-poster-wrap">
                         <img src="images/severance.jpeg" class="film-poster">
@@ -191,7 +187,7 @@
                 </article>
             </div>
         </section>
-    </main>
+    </div>
 
     <footer class="footer">
         <p>© 2026 My Campus</p>

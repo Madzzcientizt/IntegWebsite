@@ -47,40 +47,38 @@
         </div>
     </header>
 
-    <main class="films">
+    <div class="films">
+
+        <input type="radio" name="film-genre" id="f-all" checked>
+        <input type="radio" name="film-genre" id="f-thriller">
+        <input type="radio" name="film-genre" id="f-horror">
+        <input type="radio" name="film-genre" id="f-war">
+        <input type="radio" name="film-genre" id="f-scifi">
+        <input type="radio" name="film-genre" id="f-action">
 
         <div class="films-header">
-            <h2 class="films-title">My Films</h2>
+            <h2 class="films-title">My Favorite Films</h2>
 
             <section class="music-filter">
-
                 <div class="genre-dropdown">
 
-                    <input type="radio" name="genre" id="g-all" checked>
-                    <input type="radio" name="genre" id="g-vgo">
-                    <input type="radio" name="genre" id="g-tso">
-                    <input type="radio" name="genre" id="g-rock">
-                    <input type="radio" name="genre" id="g-metal">
-                    <input type="radio" name="genre" id="g-alt">
+                    <input type="checkbox" id="dropdown-toggle-films" class="dropdown-toggle">
 
-                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
-
-                    <label for="dropdown-toggle" class="dropdown-selected">
+                    <label for="dropdown-toggle-films" class="dropdown-selected">
                     <span class="selected-text"></span>
                     <span class="arrow">▾</span>
                 </label>
 
                     <div class="dropdown-options">
-                        <label for="g-all">ALL</label>
-                        <label for="g-vgo">VIDEO GAME OST</label>
-                        <label for="g-tso">TV SERIES OST</label>
-                        <label for="g-rock">ROCK</label>
-                        <label for="g-metal">METAL</label>
-                        <label for="g-alt">ALT / INDIE</label>
+                        <label for="f-all">ALL</label>
+                        <label for="f-thriller">THRILLER</label>
+                        <label for="f-horror">HORROR</label>
+                        <label for="f-war">WAR</label>
+                        <label for="f-scifi">SCI-FI</label>
+                        <label for="f-action">ACTION</label>
                     </div>
 
                 </div>
-
             </section>
         </div>
 
@@ -88,7 +86,7 @@
 
             <div class="film-grid">
 
-                <article class="film-card">
+                <article class="film-card" data-genre="thriller scifi">
 
                     <div class="film-poster-wrap">
                         <img src="images/theprestige.jpg" class="film-poster">
@@ -122,7 +120,7 @@
                     </div>
                 </article>
 
-                <article class="film-card">
+                <article class="film-card" data-genre="horror scifi">
 
                     <div class="film-poster-wrap">
                         <img src="images/thething.jpg" class="film-poster">
@@ -156,7 +154,7 @@
                     </div>
                 </article>
 
-                <article class="film-card">
+                <article class="film-card" data-genre="war action">
 
                     <div class="film-poster-wrap">
                         <img src="images/ingloriousbasterds.jpg" class="film-poster">
@@ -191,7 +189,7 @@
                 </article>
             </div>
         </section>
-    </main>
+    </div>
 
     <footer class="footer">
         <p>© 2026 My Campus</p>
