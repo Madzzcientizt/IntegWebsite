@@ -5,7 +5,7 @@
 }
 
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero {
     position: relative;
@@ -32,9 +32,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    /* A tiny SVG 'twinkle' encoded directly into the CSS */
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0L11 9L20 10L11 11L10 20L9 11L0 10L9 9L10 0Z' fill='white' opacity='0.3'/%3E%3C/svg%3E");
-    /* Control how dense the stars are */
     background-size: 40px 40px;
     background-position: center;
     opacity: 0.5;
@@ -97,7 +95,6 @@
 .text-box {
     position: absolute;
     right: 420px;
-    /* moved left */
     bottom: 70px;
     width: 860px;
     background: var(--color-mid-green);
@@ -107,9 +104,6 @@
     transform: rotate(-2deg);
     z-index: 4;
 }
-
-
-/* slight overlap into image */
 
 .text-box {
     transform: translateX(60px);
@@ -138,26 +132,18 @@
 }
 
 
-/* The Bridge Connector */
+/* Connector */
 
 .hero-wrapper::after {
     content: "";
     position: absolute;
-    /* Adjusted bottom value to ensure it overlaps both gold borders */
     bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
-    /* Increased height ensures it reaches the bottom section */
     width: 800px;
     height: 350px;
     background-color: var(--color-gold);
-    /* Recalibrated for heavy thickness and perfect contact points */
-    clip-path: polygon( 35% 0%, 55% 0%, /* Wide top attachment */
-    60% 40%, 85% 40%, /* Heavy middle path */
-    95% 100%, 75% 100%, /* Wide bottom attachment */
-    65% 55%, 40% 55%/* Thick return path */
-    );
-    /* Set to a level that is above backgrounds but behind the main green boxes if needed */
+    clip-path: polygon( 35% 0%, 55% 0%, 60% 40%, 85% 40%, 95% 100%, 75% 100%, 65% 55%, 40% 55%);
     z-index: 0;
     pointer-events: none;
 }
@@ -171,14 +157,13 @@
     width: 700px;
     height: 280px;
     background: var(--color-gold);
-    /* NEW SHAPE – sharp angular descent */
     clip-path: polygon( 30% 0%, 80% 0%, 65% 35%, 95% 60%, 75% 100%, 30% 100%, 45% 65%, 15% 40%);
     z-index: 0;
     pointer-events: none;
 }
 
 
-/* ================= METAVERSE SECTION ================= */
+/* METAVERSE SECTION */
 
 .metaverse-section {
     position: relative;
@@ -194,7 +179,6 @@
     position: relative;
     max-width: 1500px;
     margin: auto;
-    /* Using your deep hunter to forest green gradient */
     background: linear-gradient(135deg, var(--color-deep-hunter), var(--color-forest-green));
     border: 6px solid var(--color-gold);
     padding: 50px 50px;
@@ -210,7 +194,6 @@
     background-image: radial-gradient( rgba(255, 255, 255, 0.15) 2px, transparent 2px);
     background-size: 20px 20px;
     opacity: 0.5;
-    /* fade effect */
     mask-image: radial-gradient( circle at 30% 50%, black 40%, transparent 80%);
     z-index: 0;
 }
@@ -244,9 +227,6 @@
     line-height: 1.6;
 }
 
-
-/* BLOG STRIP STYLE (NOT CARDS) */
-
 .meta-blogs {
     display: flex;
     flex-direction: column;
@@ -256,7 +236,6 @@
 .blog-panel {
     position: relative;
     padding: 22px 30px 22px 110px;
-    /* Increased opacity for better text contrast against the background */
     background: var(--color-deep-hunter);
     border: 2px solid var(--color-gold);
     backdrop-filter: blur(8px);
@@ -265,20 +244,15 @@
 }
 
 .meta-bio.blog-panel {
-    /* Uses mid-green for better hierarchy */
     border-left: 8px solid var(--color-gold);
     margin-bottom: 50px;
 }
 
 .blog-panel:hover {
-    /* Shifts to a solid mid-green to make text extremely clear on hover */
     background: var(--color-mid-green);
     transform: translateX(12px) rotate(0.5deg);
     box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
 }
-
-
-/* BIG NUMBER ON LEFT */
 
 .blog-number {
     position: absolute;
@@ -288,7 +262,6 @@
     font-size: 2.2rem;
     font-family: var(--font-heading);
     color: var(--color-gold);
-    /* Increased opacity from 0.4 to 0.6 for better visibility */
     opacity: 0.6;
     letter-spacing: 2px;
 }
@@ -300,13 +273,11 @@
 .blog-panel h3 {
     font-family: var(--font-heading);
     color: var(--color-gold);
-    /* Bright gold for primary headings */
     margin-bottom: 10px;
 }
 
 .blog-panel p {
     font-family: var(--font-body);
-    /* Pale sage provides much better readability on dark green than pure white */
     color: var(--color-white);
     font-size: 1.1rem;
     line-height: 1.6;
@@ -326,7 +297,6 @@
 
 .blog-panel a:hover {
     color: var(--color-white);
-    /* Text turns white on hover for peak contrast */
     padding-left: 5px;
 }
 
@@ -346,7 +316,7 @@
 }
 
 
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 .persona-gallery-section {
     padding: 90px 0;

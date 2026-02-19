@@ -1,6 +1,4 @@
-/* =========================
-   GALLERY LAYOUT
-   ========================= */
+/* GALLERY LAYOUT */
 
 .gallery-wrapper {
     margin-top: 60px;
@@ -24,9 +22,7 @@ main {
 }
 
 
-/* =========================
-   PERSONA DROPDOWN (FILMS STYLE)
-   ========================= */
+/* DROPDOWN (FILMS) */
 
 .genre-dropdown {
     position: relative;
@@ -35,15 +31,9 @@ main {
     z-index: 1000;
 }
 
-
-/* Hide radios */
-
 .genre-dropdown input[type="radio"] {
     display: none;
 }
-
-
-/* Hide toggle */
 
 .dropdown-toggle {
     display: none;
@@ -62,10 +52,8 @@ main {
     cursor: pointer;
     letter-spacing: 2px;
     transition: 0.25s ease;
-    /* REMOVE SLANT */
     clip-path: none;
     border-radius: 0;
-    /* sharp corners like film page */
 }
 
 .dropdown-selected:hover {
@@ -110,9 +98,7 @@ main {
 }
 
 
-/* =========================
-   Dynamic Selected Text
-   ========================= */
+/* Selected */
 
 #all:checked~.films-header .selected-text::after {
     content: "ALL";
@@ -139,9 +125,7 @@ main {
 }
 
 
-/* =========================
-   MASONRY GRID
-   ========================= */
+/* GRID */
 
 .masonry {
     column-count: 3;
@@ -202,19 +186,11 @@ main {
 }
 
 
-/* =========================
-   FILTER LOGIC
-   ========================= */
-
-
-/* Show all */
+/* FILTER LOGIC */
 
 #all:checked~.masonry .item {
     display: inline-block;
 }
-
-
-/* Me */
 
 #me:checked~.masonry .item {
     display: none;
@@ -224,9 +200,6 @@ main {
     display: inline-block;
 }
 
-
-/* Family */
-
 #family:checked~.masonry .item {
     display: none;
 }
@@ -234,9 +207,6 @@ main {
 #family:checked~.masonry .family {
     display: inline-block;
 }
-
-
-/* Work */
 
 #work:checked~.masonry .item {
     display: none;
@@ -246,9 +216,6 @@ main {
     display: inline-block;
 }
 
-
-/* School */
-
 #school:checked~.masonry .item {
     display: none;
 }
@@ -256,9 +223,6 @@ main {
 #school:checked~.masonry .school {
     display: inline-block;
 }
-
-
-/* Friends */
 
 #friends:checked~.masonry .item {
     display: none;
@@ -269,9 +233,7 @@ main {
 }
 
 
-/* =========================
-   LIGHTBOX
-   ========================= */
+/* LIGHTBOX */
 
 .lightbox {
     position: fixed;
@@ -297,34 +259,4 @@ main {
     position: absolute;
     inset: 0;
     cursor: default;
-}
-
-
-/* =========================
-   BACK TO TOP
-   ========================= */
-
-.back-to-top {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 48px;
-    height: 48px;
-    background-color: var(--color-forest-green);
-    color: var(--color-white);
-    font-size: 22px;
-    text-decoration: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.3s;
-    z-index: 1000;
-}
-
-.back-to-top:hover {
-    background-color: var(--color-deep-hunter);
-    color: var(--color-gold);
-    transform: translateY(-3px);
 }

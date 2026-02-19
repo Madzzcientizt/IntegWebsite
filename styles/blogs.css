@@ -1,6 +1,4 @@
-/* =========================
-   BLOG PAGE — PERSONA STYLE
-   ========================= */
+/* BLOG PAGE */
 
 .blog-page {
     max-width: 1100px;
@@ -122,9 +120,6 @@
     object-fit: cover;
 }
 
-
-/* subtle texture */
-
 .blog-frame::before {
     content: "";
     position: absolute;
@@ -136,9 +131,7 @@
 }
 
 
-/* =========================
-   BLOG DROPDOWN (BEATS STYLE)
-   ========================= */
+/* BLOG DROPDOWN */
 
 .blog-dropdown {
     position: relative;
@@ -199,9 +192,7 @@
 }
 
 
-/* =========================
-   BLOG CONNECTOR — VARIANT A
-   ========================= */
+/* BLOG CONNECTOR VARIANT A */
 
 .blog-section::after {
     content: "";
@@ -218,9 +209,7 @@
 }
 
 
-/* =========================
-   BLOG CONNECTOR — VARIANT B
-   ========================= */
+/* BLOG CONNECTOR VARIANT B */
 
 .blog-section.alt-bridge::after {
     content: "";
@@ -237,9 +226,7 @@
 }
 
 
-/* =========================
-   BLOG CONNECTOR — VARIANT C
-   ========================= */
+/* BLOG CONNECTOR VARIANT C */
 
 .blog-section.arrow-bridge::after {
     content: "";
@@ -250,11 +237,7 @@
     width: 750px;
     height: 300px;
     background: var(--color-gold);
-    clip-path: polygon( 25% 0%, 75% 0%, /* wide attach */
-    60% 35%, 85% 35%, /* right wing */
-    50% 100%, /* sharp bottom tip */
-    15% 35%, 40% 35%/* left wing */
-    );
+    clip-path: polygon( 25% 0%, 75% 0%, 60% 35%, 85% 35%, 50% 100%, 15% 35%, 40% 35%);
     z-index: -1;
     pointer-events: none;
 }
