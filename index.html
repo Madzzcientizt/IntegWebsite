@@ -1,144 +1,162 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <meta name="description" content="landing page" />
-    <link rel="stylesheet" href="design.css">
+    <meta charset="UTF-8">
+    <title>[ MADZ ]</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/indexStyle.css">
 </head>
 
-<body id="top">
-    <header>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+<body class="home">
+    <header class="persona-header">
+        <div class="header-inner">
 
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+            <a href="index.html" class="logo-link">
+                <div class="logo">[ MADZ ]</div>
+            </a>
 
-        <div class="brand">
-            <a href="index.html" style="text-decoration: none;" class="brand-link">
-                <h1 class="head">Dev</h1><img src="log.png" class="logo"></a>
+            <nav class="nav">
+
+                <a href="bio.html">Biography</a>
+
+                <div class="dropdown">
+                    <button class="drop-btn">Blogs ▾</button>
+                    <div class="dropdown-content">
+                        <a href="blog1.html">Part 1</a>
+                        <a href="blog2.html">Part 2</a>
+                        <a href="blog3.html">Part 3</a>
+                    </div>
+                </div>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="mybeats.html">My Beats</a>
+
+                <div class="dropdown">
+                    <button class="drop-btn">Films ▾</button>
+                    <div class="dropdown-content">
+                        <a href="myFilmMovies.html">Movies</a>
+                        <a href="myTVSeries.html">TV Shows</a>
+                    </div>
+                </div>
+
+                <a href="#">Dream Places</a>
+                <a href="#">Bucket List</a>
+
+            </nav>
+
         </div>
-
-        <nav class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bio.html">About Me</a></li>
-                <li class="dropdown">
-                    <input type="checkbox" id="blog-unpack" class="dropdown-toggle">
-                    <label for="blog-unpack" class="dropdown-label">
-Blogs <span class="arrow">▼</span>
-                    </label>
-
-                    <ul class="submenu">
-                        <li><a href="blog1.html">Blog 1</a></li>
-                        <li><a href="blog2.html">Blog 2</a></li>
-                        <li><a href="blog3.html">Blog 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="landing">
-        <section class="hero">
-            <div class="hero-text">
-                <h2>Heya, I’m Reales, Sean Kirby E.</h2>
-                <p class="tagline">
-                    A 2nd Yr. Computer Science student documenting my journey in my studies, programming, software engineering, and game design, one project and struggle at a time.
-                </p>
-
-                <p class="author-intro">
-                    I’m the author/owner of this website, where I share blogs about my various experiences as a working student and developer, from conceptualizing game mechanics to personal stories.
-                </p>
+    <section class="hero-wrapper">
+        <div class="hero">
+            <div class="title-wrapper">
+                <div class="title-back"></div>
+                <div class="title-card">
+                    <h1>
+                        <span class="gold">Reales</span><br>Sean Kirby E.
+                    </h1>
+                </div>
             </div>
 
-            <div class="hero-image">
-                <div class="my-image-container"></div>
+            <div class="hero-frame">
+
+                <div class="image-side">
+                    <img src="images/REALES.png" alt="Student PNG">
+                </div>
+
+                <div class="text-box">
+                    <p>
+                        A 2nd Yr. Computer Science student documenting my journey in my studies, programming, software engineering, and game design, one project and struggle at a time.<br><br>I’m the author/owner of this website, where I share blogs about
+                        my various experiences as a working student and developer, from conceptualizing game mechanics to personal stories.
+                    </p>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="featured-blogs">
-            <h2 class="section-title">Featured Blogs</h2>
+    <section class="metaverse-section">
+        <div class="meta-wrapper">
+            <div class="meta-frame">
 
-            <div class="blog-grid">
-                <a href="blog1.html" class="blog-card">
-                    <h3>Conceptualizing a Game</h3>
+                <div class="meta-bio blog-panel">
+                    <span class="blog-number">BIO</span>
+                    <h2>[ Character Lore ]</h2>
                     <p>
-                        A breakdown of the challenges we faced while designing mechanics for our software engineering project.
+                        The story behind the developer.
                     </p>
-                </a>
+                    <a href="bio.html">Read Here →</a>
+                </div>
 
-                <a href="blog2.html" class="blog-card">
-                    <h3>Life as a Working Student</h3>
-                    <p>
-                        Balancing academics, deadlines, and work, lessons learned the hard way.
-                    </p>
-                </a>
+                <div class="meta-blogs">
+                    <article class="blog-panel">
+                        <span class="blog-number">01</span>
+                        <h3>[ Conceptualizing a Game ]</h3>
+                        <p>Breaking down mechanics, struggles, and iteration process.</p>
+                        <a href="blog1.html">Read Here →</a>
+                    </article>
 
-                <a href="blog3.html" class="blog-card">
-                    <h3>Future Plans</h3>
-                    <p>
-                        About my dreams and aspirations as well as skills that I need to pick up or polish.
-                    </p>
-                </a>
+                    <article class="blog-panel">
+                        <span class="blog-number">02</span>
+                        <h3>[ Working Student Life ]</h3>
+                        <p>Balancing academics, deadliens, and responsibilities.</p>
+                        <a href="blog2.html">Read Here →</a>
+                    </article>
 
-                <a href="bio.html" class="blog-card">
-                    <h3>About the Author</h3>
-                    <p>
-                        Learn more about the lore of my life.
-                    </p>
-                </a>
+                    <article class="blog-panel">
+                        <span class="blog-number">03</span>
+                        <h3>[ Future Plans ]</h3>
+                        <p>Skills to develop and dreams to pursue.</p>
+                        <a href="blog3.html">Read Here →</a>
+                    </article>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="current-work">
-            <h2 class="section-title">Currently Working On</h2>
-            <ul class="work-list">
-                <li>📚 Studying Computer Science</li>
-                <li>🎮 Designing a turn-based game project</li>
-                <li>💻 Improving programming fundamentals</li>
-            </ul>
-        </section>
+    <section class="persona-gallery-section">
+        <div class="gallery-frame">
 
-        <section class="gallery-preview">
-            <h2 class="section-title">Gallery Preview</h2>
-
-            <div class="preview-grid">
-                <a href="gallery.html">
-                    <img src="me.jpg" alt="Portrait">
-                </a>
-
-                <a href="gallery.html">
-                    <img src="fam.jpg" alt="Family">
-                </a>
-
-                <a href="gallery.html">
-                    <img src="work.jpg" alt="Work">
-                </a>
-
-                <a href="gallery.html">
-                    <img src="college.jpg" alt="School">
-                </a>
-
-                <a href="gallery.html">
-                    <img src="friends.jpg" alt="Friends">
-                </a>
-
-                <a href="gallery.html" class="view-more">
-                    <span>View Full Gallery →</span>
-                </a>
+            <div class="gallery-header">
+                <h2>[ Gallery Preview ]</h2>
             </div>
-        </section>
-        <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
-    </main>
-    <footer>
 
+            <div class="gallery-grid">
+
+                <div class="gallery-card">
+                    <img src="images/me.jpg" alt="">
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/fam.jpg" alt="">
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/work.jpg" alt="">
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/college.jpg" alt="">
+                </div>
+
+                <div class="gallery-card">
+                    <img src="images/friends.jpg" alt="">
+                </div>
+
+                <div class="gallery-cta">
+                    <a href="gallery.html">View Full Gallery →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 My Campus</p>
     </footer>
+
 </body>
 
 </html>

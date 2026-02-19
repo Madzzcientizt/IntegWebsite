@@ -1,135 +1,168 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Balancing Shifts and Studies</title>
-    <meta name="description" content="Blog about the Struggle of Conceptualizing a Game" />
-    <link rel="stylesheet" href="design.css">
+    <meta charset="UTF-8">
+    <title>[ BALANCING SHIFTS AND STUDIES ]</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/blogs.css">
 </head>
 
-<body id="top">
-    <header>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+<body>
 
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <header class="persona-header">
+        <div class="header-inner">
 
-        <div class="brand">
-            <a href="index.html" style="text-decoration: none;" class="brand-link">
-                <h1 class="head">Dev</h1><img src="log.png" class="logo"></a>
+            <a href="index.html" class="logo-link">
+                <div class="logo">[ MADZ ]</div>
+            </a>
+
+            <nav class="nav">
+
+                <a href="bio.html">Biography</a>
+
+                <div class="dropdown">
+                    <button class="drop-btn">Blogs ▾</button>
+                    <div class="dropdown-content">
+                        <a href="blog1.html">Part 1</a>
+                        <a href="blog2.html">Part 2</a>
+                        <a href="blog3.html">Part 3</a>
+                    </div>
+                </div>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="mybeats.html">My Beats</a>
+
+                <div class="dropdown">
+                    <button class="drop-btn">Films ▾</button>
+                    <div class="dropdown-content">
+                        <a href="myFilmMovies.html">Movies</a>
+                        <a href="myTVSeries.html">TV Shows</a>
+                    </div>
+                </div>
+
+                <a href="#">Dream Places</a>
+                <a href="#">Bucket List</a>
+            </nav>
         </div>
-
-        <nav class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bio.html">About Me</a></li>
-                <li class="dropdown">
-                    <input type="checkbox" id="blog-unpack" class="dropdown-toggle">
-                    <label for="blog-unpack" class="dropdown-label">
-Blogs <span class="arrow">▼</span>
-                    </label>
-
-                    <ul class="submenu">
-                        <li><a href="blog1.html">Blog 1</a></li>
-                        <li><a href="blog2.html">Blog 2</a></li>
-                        <li><a href="blog3.html">Blog 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main>
-        <article class="container">
-            <header class="article-header">
-                <div class="title-group">
-                    <nav class="toc-button">
-                        <details>
-                            <summary aria-label="Table of Contents">☰</summary>
-                            <ul>
-                                <li><a href="#intro">Intro</a></li>
-                                <li><a href="#sched">Schedule</a></li>
-                                <li><a href="#past">Past and Present</a></li>
-                                <li><a href="#costs">Hidden Costs</a></li>
-                                <li><a href="#conclusion">Conclusion</a></li>
-                            </ul>
-                        </details>
-                    </nav>
 
-                    <h1 class="head-article">
-                        Balancing Shifts and Studies
-                    </h1>
-                </div>
+    <main class="blog-page">
 
-                <div class="author">
-                    By: Sean Kirby E. Reales 01/13/26
+        <div class="blog-top">
+            <h1>[ Balancing Shifts and Studies ]</h1>
+
+            <div class="blog-dropdown">
+                <input type="checkbox" id="blog-toggle" class="blog-toggle">
+
+                <label for="blog-toggle" class="blog-selected">
+                Sections ▾
+            </label>
+
+                <div class="blog-options">
+                    <a href="#intro">Intro</a>
+                    <a href="#sched">Schedule</a>
+                    <a href="#past">Past & Present</a>
+                    <a href="#costs">Hidden Costs</a>
+                    <a href="#conclusion">Conclusion</a>
                 </div>
-            </header>
-            <section id="intro">
+            </div>
+        </div>
+
+        <p class="blog-meta">
+            Sean Kirby E. Reales • 01.13.26
+        </p>
+
+        <section id="intro" class="blog-section arrow-bridge">
+            <div class="blog-frame">
                 <h2>Intro</h2>
-
                 <p class="pblog">
                     People always told me being a working student builds character, and I believe them to be true since I learned responsibility and work ethic that affected my whole life but I don’t think anyone really explained what that actually feels like. Right now,
                     my days start before the sun is up and end when most people are already asleep. Sometimes I’m not even sure if I’m tired, just running on autopilot. I don’t regret choosing this path, but I won’t lie, it’s nothing like the motivational
                     quotes make it sound.
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <section id="sched">
-                <h2>Sched doesn't let up</h2>
-                <div class="img-row">
-                    <img src="alarm.jpg" class="blogImg" style="height: 400px; width: 800px;">
+        <section id="sched" class="blog-section alt-bridge">
+            <div class="blog-frame alt">
+
+                <h2>Schedule Doesn't Let Up</h2>
+
+                <div class="blog-images">
+                    <img src="images/alarm.jpg">
                 </div>
+
                 <p class="pblog">
                     My typical day starts with school from 7:30 AM to 7:00 PM, and once I get home, the second half of my life begins: working from home as customer service rep. It’s not glamorous, and it definitely isn’t easy. Most <em>"nights"</em>                    I get around four hours of sleep after getting home and wake up around 12 AM to start working, then I go straight to school again the moment my work shift ends. There’s barely any space to breathe in between. People ask me how I manage,
                     and honestly, I just… do it. It feels less like a skill and more like survival at this point.
                 </p>
-            </section>
 
-            <section id="past">
+            </div>
+        </section>
+
+        <section id="past" class="blog-section">
+            <div class="blog-frame">
+
                 <h2>Past and Present</h2>
-                <div class="img-row">
-                    <img src="work.jpg" class="blogImg" style="height: 600px; width: 1000px;">
+
+                <div class="blog-images">
+                    <img src="images/work.jpg">
                 </div>
+
                 <p class="pblog">
                     This isn’t actually my first time being a working student. Back in senior high school, I was also doing both, but the schedule was way more forgiving, only around six hours of school. I could still rest, watch something, game, or occasionally hang out
                     with the gang. Now everything is compressed and heavier. The workload increased, the stakes are higher, and even the expectations feel different. It’s strange how the same label, “working student” can mean completely different things
                     depending on the stage of life.
                 </p>
-            </section>
 
-            <section id="costs">
+            </div>
+        </section>
+
+        <section id="costs" class="blog-section alt-bridge">
+            <div class="blog-frame alt">
+
                 <h2>Hidden Costs</h2>
-                <div class="img-row">
-                    <img src="cost.jpg" class="blogImg" style="height: 500px; width: 800px;">
-                    <img src="reward.jpg" class="blogImg" style="height: 500px; width: 600px;">
+
+                <div class="blog-images two-col">
+                    <img src="images/cost.jpg">
+                    <img src="images/reward.jpg">
                 </div>
+
                 <p class="pblog">
                     Most people only notice the part where I’m “ambitious”, "responsible", or “disciplined,” but they don’t see the parts I silently trade away. Sleep becomes optional, hobbies disappear, and social life turns into unread messages and postponed plans. There’s
                     a particular kind of fatigue that comes with being tired every single day, yet still having responsibilities you cannot drop. But even with all of that, I don’t feel like quitting. If anything, it made me realize how much I value the
                     things I’m working for.
                 </p>
-            </section>
 
-            <section id="conclusion">
+            </div>
+        </section>
+
+        <section id="conclusion" class="blog-section no-bridge">
+            <div class="blog-frame">
+
                 <h2>Conclusion</h2>
-                <div class="img-row">
-                    <img src="work2.jpg" class="blogImg" style="height: 600px; width: 1000px;">
+
+                <div class="blog-images">
+                    <img src="images/work2.jpg">
                 </div>
+
                 <p class="pblog">
                     Being a working student taught me that growth doesn’t always look inspirational, sometimes it looks like eye bags, power naps, and surviving on coffee. But it also taught me resilience and how much I’m capable of handling when I don’t have a choice. If
                     there’s one thing I’m taking with me from this period, it’s that the hardest seasons usually prepare you for the ones you want. And maybe in the future, when things finally slow down, I’ll look back at this version of myself with respect
                     instead of exhaustion.
                 </p>
-            </section>
-        </article>
-        <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+
+            </div>
+        </section>
+
     </main>
+
+    <footer class="footer">
+        <p>© 2026 My Campus</p>
+    </footer>
+
 </body>
 
 </html>

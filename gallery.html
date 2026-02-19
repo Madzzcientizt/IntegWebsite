@@ -4,52 +4,54 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gallery</title>
+    <title>[ GALLERY ]</title>
     <meta name="description" content="Gallery of projects and works" />
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/moviesStyles.css">
 </head>
 
 <body id="top">
-    <header>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <header class="persona-header">
+        <div class="header-inner">
 
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+            <a href="index.html" class="logo-link">
+                <div class="logo">[ MADZ ]</div>
+            </a>
 
-        <div class="brand">
-            <a href="index.html" style="text-decoration: none;" class="brand-link">
-                <h1 class="head">Dev</h1><img src="log.png" class="logo"></a>
+            <nav class="nav">
+
+                <a href="bio.html">Biography</a>
+
+                <div class="dropdown">
+                    <button class="drop-btn">Blogs ▾</button>
+                    <div class="dropdown-content">
+                        <a href="blog1.html">Part 1</a>
+                        <a href="blog2.html">Part 2</a>
+                        <a href="blog3.html">Part 3</a>
+                    </div>
+                </div>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="mybeats.html">My Beats</a>
+
+                <div class="dropdown">
+                    <button class="drop-btn">Films ▾</button>
+                    <div class="dropdown-content">
+                        <a href="myFilmMovies.html">Movies</a>
+                        <a href="myTVSeries.html">TV Shows</a>
+                    </div>
+                </div>
+
+                <a href="#">Dream Places</a>
+                <a href="#">Bucket List</a>
+            </nav>
         </div>
-
-        <nav class="sidebar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bio.html">About Me</a></li>
-                <li class="dropdown">
-                    <input type="checkbox" id="blog-unpack" class="dropdown-toggle">
-                    <label for="blog-unpack" class="dropdown-label">
-Blogs <span class="arrow">▼</span>
-                    </label>
-
-                    <ul class="submenu">
-                        <li><a href="blog1.html">Blog 1</a></li>
-                        <li><a href="blog2.html">Blog 2</a></li>
-                        <li><a href="blog3.html">Blog 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main class="landing">
 
         <section class="gallery-wrapper">
-
-            <h2 class="section-title">Gallery</h2>
 
             <input type="radio" name="filter" id="all" checked>
             <input type="radio" name="filter" id="me">
@@ -58,19 +60,36 @@ Blogs <span class="arrow">▼</span>
             <input type="radio" name="filter" id="school">
             <input type="radio" name="filter" id="friends">
 
-            <div class="filter-controls">
-                <label for="all">All</label>
-                <label for="me">Me</label>
-                <label for="family">Family</label>
-                <label for="work">Work</label>
-                <label for="school">School</label>
-                <label for="friends">Friends</label>
+            <div class="films-header">
+
+                <h2 class="films-title">Gallery</h2>
+
+                <div class="genre-dropdown">
+
+                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+
+                    <label for="dropdown-toggle" class="dropdown-selected">
+                        <span class="selected-text"></span>
+                        <span class="arrow">▾</span>
+                    </label>
+
+                    <div class="dropdown-options">
+                        <label for="all">ALL</label>
+                        <label for="me">ME</label>
+                        <label for="family">FAMILY</label>
+                        <label for="work">WORK</label>
+                        <label for="school">SCHOOL</label>
+                        <label for="friends">FRIENDS</label>
+                    </div>
+
+                </div>
+
             </div>
 
             <div class="masonry">
 
                 <a href="#img1" class="item me">
-                    <img src="me.jpg">
+                    <img src="images/me.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Childhood Pic</span>
@@ -78,7 +97,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img2" class="item me">
-                    <img src="REALES.jpg">
+                    <img src="images/REALES.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Professional Pic</span>
@@ -86,7 +105,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img3" class="item me work">
-                    <img src="workCafe.jpg">
+                    <img src="images/workCafe.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Cafe Work</span>
@@ -94,7 +113,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img4" class="item me">
-                    <img src="me2.jpg">
+                    <img src="images/me2.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Beach</span>
@@ -102,7 +121,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img5" class="item me">
-                    <img src="me3.jpg">
+                    <img src="images/me3.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Chilling</span>
@@ -110,7 +129,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img6" class="item family">
-                    <img src="fam.jpg">
+                    <img src="images/fam.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Pic with Parents</span>
@@ -118,7 +137,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img7" class="item family">
-                    <img src="fam2.jpg">
+                    <img src="images/fam2.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Pic with extended Fam</span>
@@ -126,7 +145,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img8" class="item family">
-                    <img src="fam3.jpg">
+                    <img src="images/fam3.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Airport Fam Pic</span>
@@ -134,7 +153,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img9" class="item family">
-                    <img src="fam4.jpg">
+                    <img src="images/fam4.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Xmas Fam Pic</span>
@@ -142,7 +161,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img10" class="item family">
-                    <img src="triofam.jpg">
+                    <img src="images/triofam.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">With Mom and lil Bro</span>
@@ -150,7 +169,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img11" class="item work">
-                    <img src="work.jpg">
+                    <img src="images/work.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Baguio Work</span>
@@ -158,7 +177,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img12" class="item work">
-                    <img src="work2.jpg">
+                    <img src="images/work2.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Cafe Work Setup</span>
@@ -166,7 +185,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img13" class="item work">
-                    <img src="twoWork.jpg">
+                    <img src="images/twoWork.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Working Two Jobs</span>
@@ -174,7 +193,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img14" class="item work">
-                    <img src="training.jpg">
+                    <img src="images/training.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Training</span>
@@ -182,7 +201,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img15" class="item work">
-                    <img src="work3.jpg">
+                    <img src="images/work3.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Training 2</span>
@@ -190,7 +209,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img16" class="item work">
-                    <img src="reward.jpg">
+                    <img src="images/reward.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Work Reward</span>
@@ -198,7 +217,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img17" class="item school">
-                    <img src="map.png">
+                    <img src="images/map.png">
 
                     <span class="overlay">
                         <span class="overlay-text">Game Map for Soft Eng</span>
@@ -206,7 +225,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img18" class="item school">
-                    <img src="college.jpg">
+                    <img src="images/college.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Doing School Acts</span>
@@ -214,7 +233,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img19" class="item school">
-                    <img src="godot.png">
+                    <img src="images/godot.png">
 
                     <span class="overlay">
                         <span class="overlay-text">GoDot</span>
@@ -222,7 +241,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img20" class="item school">
-                    <img src="alarm.jpg">
+                    <img src="images/alarm.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Alarm</span>
@@ -230,7 +249,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img21" class="item school">
-                    <img src="skills.png">
+                    <img src="images/skills.png">
 
                     <span class="overlay">
                         <span class="overlay-text">Skills Needed</span>
@@ -238,7 +257,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img22" class="item me">
-                    <img src="cost.jpg">
+                    <img src="images/cost.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Sick</span>
@@ -246,7 +265,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img23" class="item friends">
-                    <img src="friends.jpg">
+                    <img src="images/friends.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends</span>
@@ -254,7 +273,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img24" class="item friends">
-                    <img src="friends2.jpg">
+                    <img src="images/friends2.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 2</span>
@@ -262,7 +281,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img25" class="item friends">
-                    <img src="friends3.jpg">
+                    <img src="images/friends3.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 3</span>
@@ -270,7 +289,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img26" class="item friends">
-                    <img src="friends4.jpg">
+                    <img src="images/friends4.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 4</span>
@@ -278,7 +297,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img27" class="item friends">
-                    <img src="friends5.jpg">
+                    <img src="images/friends5.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 5</span>
@@ -286,7 +305,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img28" class="item friends">
-                    <img src="friends6.jpg">
+                    <img src="images/friends6.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 6</span>
@@ -294,7 +313,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img29" class="item friends">
-                    <img src="friends7.jpg">
+                    <img src="images/friends7.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 7</span>
@@ -302,7 +321,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img30" class="item friends">
-                    <img src="friends8.jpg">
+                    <img src="images/friends8.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Friends 8</span>
@@ -310,7 +329,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img31" class="item school">
-                    <img src="school.jpg">
+                    <img src="images/school.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Calculus</span>
@@ -318,7 +337,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img32" class="item school">
-                    <img src="brainstorming.jpg">
+                    <img src="images/brainstorming.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Brainstorming</span>
@@ -326,7 +345,7 @@ Blogs <span class="arrow">▼</span>
                 </a>
 
                 <a href="#img33" class="item school">
-                    <img src="recognition.jpg">
+                    <img src="images/recognition.jpg">
 
                     <span class="overlay">
                         <span class="overlay-text">Recognition</span>
@@ -340,172 +359,175 @@ Blogs <span class="arrow">▼</span>
 
         <div id="img1" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="me.jpg">
+            <img src="images/me.jpg">
         </div>
 
         <div id="img2" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="REALES.jpg">
+            <img src="images/REALES.jpg">
         </div>
 
         <div id="img3" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="workCafe.jpg">
+            <img src="images/workCafe.jpg">
         </div>
 
         <div id="img4" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="me2.jpg">
+            <img src="images/me2.jpg">
         </div>
 
         <div id="img5" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="me3.jpg">
+            <img src="images/me3.jpg">
         </div>
 
         <div id="img6" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="fam.jpg">
+            <img src="images/fam.jpg">
         </div>
 
         <div id="img7" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="fam2.jpg">
+            <img src="images/fam2.jpg">
         </div>
 
         <div id="img8" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="fam3.jpg">
+            <img src="images/fam3.jpg">
         </div>
 
         <div id="img9" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="fam4.jpg">
+            <img src="images/fam4.jpg">
         </div>
 
         <div id="img10" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="triofam.jpg">
+            <img src="images/triofam.jpg">
         </div>
 
         <div id="img11" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="work.jpg">
+            <img src="images/work.jpg">
         </div>
 
         <div id="img12" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="work2.jpg">
+            <img src="images/work2.jpg">
         </div>
 
         <div id="img13" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="twoWork.jpg">
+            <img src="images/twoWork.jpg">
         </div>
 
         <div id="img14" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="training.jpg">
+            <img src="images/training.jpg">
         </div>
 
         <div id="img15" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="work3.jpg">
+            <img src="images/work3.jpg">
         </div>
 
         <div id="img16" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="reward.jpg">
+            <img src="images/reward.jpg">
         </div>
 
         <div id="img17" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="map.png">
+            <img src="images/map.png">
         </div>
 
         <div id="img18" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="college.jpg">
+            <img src="images/college.jpg">
         </div>
 
         <div id="img19" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="godot.png">
+            <img src="images/godot.png">
         </div>
 
         <div id="img20" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="alarm.jpg">
+            <img src="images/alarm.jpg">
         </div>
 
         <div id="img21" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="skills.png">
+            <img src="images/skills.png">
         </div>
 
         <div id="img22" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="cost.jpg">
+            <img src="images/cost.jpg">
         </div>
 
         <div id="img23" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends.jpg">
+            <img src="images/friends.jpg">
         </div>
 
         <div id="img24" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends2.jpg">
+            <img src="images/friends2.jpg">
         </div>
 
         <div id="img25" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends3.jpg">
+            <img src="images/friends3.jpg">
         </div>
 
         <div id="img26" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends4.jpg">
+            <img src="images/friends4.jpg">
         </div>
 
         <div id="img27" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends5.jpg">
+            <img src="images/friends5.jpg">
         </div>
 
         <div id="img28" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends6.jpg">
+            <img src="images/friends6.jpg">
         </div>
 
         <div id="img29" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends7.jpg">
+            <img src="images/friends7.jpg">
         </div>
 
         <div id="img30" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="friends8.jpg">
+            <img src="images/friends8.jpg">
         </div>
 
         <div id="img31" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="school.jpg">
+            <img src="images/school.jpg">
         </div>
 
         <div id="img32" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="brainstorming.jpg">
+            <img src="images/brainstorming.jpg">
         </div>
 
         <div id="img33" class="lightbox">
             <a href="#" class="close"></a>
-            <img src="recognition.jpg">
+            <img src="images/recognition.jpg">
         </div>
 
         <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
     </main>
 
+    <footer class="footer">
+        <p>© 2026 My Campus</p>
+    </footer>
 </body>
 
 </html>
