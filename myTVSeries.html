@@ -110,9 +110,9 @@
                             creatures that come out when the sun goes down.
                         </p>
 
-                        <div class="film-links">
-                            <a href="#from-video" class="film-btn alt">Watch My Fav Clip</a>
-                        </div>
+                        <video class="film-video" controls preload="metadata">
+                            <source src="videos/FROM - Exclusive Official Clip (2022).mp4" type="video/mp4">
+                        </video>
                     </div>
                 </article>
 
@@ -144,9 +144,9 @@
                             complex cases, navigating corruption, and balancing his personal life with his ex-wives.
                         </p>
 
-                        <div class="film-links">
-                            <a href="#lincolnlawyer-video" class="film-btn alt">Watch My Fav Clip</a>
-                        </div>
+                        <video class="film-video" controls preload="metadata">
+                            <source src="videos/lincolnlawyer.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </article>
 
@@ -178,9 +178,9 @@
                             who has no knowledge of the outside world, and the "outie", who lives their life outside without any knowledge of their job.
                         </p>
 
-                        <div class="film-links">
-                            <a href="#severance-video" class="film-btn alt">Watch My Fav Clip</a>
-                        </div>
+                        <video class="film-video" controls preload="metadata">
+                            <source src="videos/Severance scenes_ Helly tries to pass a note to her outie (clip).mp4" type="video/mp4">
+                        </video>
                     </div>
                 </article>
             </div>
@@ -190,46 +190,6 @@
     <footer class="footer">
         <p>© 2026 By Reales, Sean Kirby E. aka Madz</p>
     </footer>
-
-    <div id="from-video" class="video-modal">
-        <div class="video-content">
-            <a href="#" class="close-btn">✕</a>
-            <iframe class="video-frame" src="https://www.youtube.com/embed/5KvMLgeh3jA?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div id="lincolnlawyer-video" class="video-modal">
-        <div class="video-content">
-            <a href="#" class="close-btn">✕</a>
-            <iframe class="video-frame" src="https://www.youtube.com/embed/j8bglppCz8c?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div id="severance-video" class="video-modal">
-        <div class="video-content">
-            <a href="#" class="close-btn">✕</a>
-            <iframe class="video-frame" src="https://www.youtube.com/embed/W_-4cBaXTWs?enablejsapi=1" allow="autoplay" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script>
-        const modals = document.querySelectorAll(".video-modal");
-
-        function stopVideo(iframe) {
-            iframe.contentWindow.postMessage(
-                '{"event":"command","func":"stopVideo","args":""}',
-                'https://www.youtube.com'
-            );
-        }
-
-        function stopAllVideos() {
-            document.querySelectorAll(".video-frame").forEach(iframe => {
-                stopVideo(iframe);
-            });
-        }
-
-        window.addEventListener("hashchange", stopAllVideos);
-    </script>
 </body>
 
 </html>
