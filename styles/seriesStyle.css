@@ -209,3 +209,17 @@
 #tv-all:checked~.film-genre .film-card {
     display: block;
 }
+
+.film-video {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+    outline: none;
+}
+
+
+/* Optional nicer spacing */
+
+.film-content video {
+    display: block;
+}
