@@ -260,3 +260,108 @@ main {
     inset: 0;
     cursor: default;
 }
+
+
+/* --- Image Map Overlay & Hover highlights (no JS) --- */
+
+.image-map-wrap {
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: rgba(255, 213, 74, 0);
+    /* fully transparent */
+    transition: background 0.25s ease, transform 0.25s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* tooltip (coords) using data- attribute */
+
+.map-overlay::after {
+    content: attr(data-coords);
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background: rgba(28, 74, 34, 0.92);
+    color: #fff;
+    padding: 6px 10px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 180ms ease, transform 180ms ease;
+    pointer-events: none;
+    z-index: 20;
+}
+
+
+/* highlight effect when hovering each overlay */
+
+.map-overlay:hover {
+    background: rgba(255, 213, 74, 0.35);
+    /* GOLD highlight */
+    backdrop-filter: brightness(1.05);
+    transform: scale(1.01);
+}
+
+.map-overlay:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Individual clip-paths (percentages for responsiveness) */
+
+
+/* Japan — rectangle area (CSS uses inset for rect) */
+
+.overlay-japan {
+    clip-path: polygon(5.8594% 6.5934%, 44.9219% 6.5934%, 44.9219% 30.0366%, 5.8594% 30.0366%);
+    -webkit-clip-path: polygon(5.8594% 6.5934%, 44.9219% 6.5934%, 44.9219% 30.0366%, 5.8594% 30.0366%);
+}
+
+
+/* Singapore — use circle via clip-path + border-radius fallback */
+
+.overlay-singapore {
+    /* center: 82.7148% 15.8242%  with radius ~13.3% of width (approx). We'll use circle() */
+    clip-path: circle(13.9% at 82.7148% 15.8242%);
+    -webkit-clip-path: circle(13.9% at 82.7148% 15.8242%);
+}
+
+
+/* Korea — triangle */
+
+.overlay-korea {
+    clip-path: polygon(29.2969% 29.3040%, 11.7188% 76.1905%, 54.6875% 76.1905%);
+    -webkit-clip-path: polygon(29.2969% 29.3040%, 11.7188% 76.1905%, 54.6875% 76.1905%);
+}
+
+
+/* Canada — pentagon */
+
+.overlay-canada {
+    clip-path: polygon(50.7812% 21.9780%, 66.4062% 33.6996%, 60.5469% 55.6777%, 45.8984% 52.7473%, 41.9922% 33.6996%);
+    -webkit-clip-path: polygon(50.7812% 21.9780%, 66.4062% 33.6996%, 60.5469% 55.6777%, 45.8984% 52.7473%, 41.9922% 33.6996%);
+}
+
+
+/* Hawaii — heptagon */
+
+.overlay-hawaii {
+    clip-path: polygon( 74.218750% 52.747253%, 82.031250% 46.886447%, 91.796875% 49.816850%, 97.656250% 61.538462%, 90.820312% 76.190476%, 77.148438% 76.190476%, 71.289062% 67.399267%);
+    -webkit-clip-path: polygon( 74.218750% 52.747253%, 82.031250% 46.886447%, 91.796875% 49.816850%, 97.656250% 61.538462%, 90.820312% 76.190476%, 77.148438% 76.190476%, 71.289062% 67.399267%);
+}
+
+
+/* ensure overlays are above decorative stickers but under any UI modals if present */
+
+.map-overlay {
+    z-index: 10;
+}
