@@ -343,3 +343,16 @@
 #g-alt:checked~.track-list .track[data-genre~="alt"] {
     display: block;
 }
+
+.cover-link {
+    display: inline-block;
+}
+
+.cover {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cover:hover {
+    transform: scale(1.05);
+}

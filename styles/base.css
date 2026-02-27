@@ -200,7 +200,7 @@ body.home .logo-link {
 
 .back-to-top {
     position: fixed;
-    bottom: 25px;
+    bottom: 80px;
     right: 25px;
     width: 48px;
     height: 48px;
@@ -218,6 +218,29 @@ body.home .logo-link {
 }
 
 .back-to-top:hover {
+    background-color: var(--color-deep-hunter);
+    color: var(--color-gold);
+    transform: translateY(-3px);
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: var(--color-forest-green);
+    color: var(--color-white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
     background-color: var(--color-deep-hunter);
     color: var(--color-gold);
     transform: translateY(-3px);
