@@ -1,10 +1,4 @@
-/* =============================== */
-
-
 /* PREMIUM BUCKET LIST DESIGN     */
-
-
-/* =============================== */
 
 .bucket-wrapper {
     max-width: 1100px;
@@ -12,9 +6,6 @@
     padding: 20px;
     position: relative;
 }
-
-
-/* stacked paper illusion */
 
 .bucket-wrapper::before,
 .bucket-wrapper::after {
@@ -39,9 +30,6 @@
     transform: rotate(1.5deg);
 }
 
-
-/* main notepad */
-
 .notepad {
     background: #fdfaf3;
     padding: 70px 70px 90px;
@@ -53,9 +41,6 @@
     font-family: var(--font-body);
 }
 
-
-/* subtle paper texture lines */
-
 .notepad::before {
     content: "";
     position: absolute;
@@ -64,9 +49,6 @@
     border-radius: 10px;
     pointer-events: none;
 }
-
-
-/* torn paper effect bottom */
 
 .notepad::after {
     content: "";
@@ -79,9 +61,6 @@
     background-size: 20% 100%;
     background-repeat: repeat-x;
 }
-
-
-/* heading */
 
 .notepad h1 {
     font-family: var(--font-heading);
@@ -96,9 +75,6 @@
     border-left: 4px solid var(--color-gold);
     padding-left: 15px;
 }
-
-
-/* section styling */
 
 .notepad section {
     background: rgba(28, 74, 34, 0.03);
@@ -117,9 +93,6 @@
     color: var(--color-forest-green);
     margin-bottom: 15px;
 }
-
-
-/* checklist */
 
 .notepad ul {
     list-style: none;
@@ -145,15 +118,9 @@
     transition: 0.25s;
 }
 
-
-/* hover interaction */
-
 .notepad li:hover {
     color: var(--color-deep-hunter);
 }
-
-
-/* improved paper clip */
 
 .paper-clip {
     position: absolute;
