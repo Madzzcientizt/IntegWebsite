@@ -7,6 +7,7 @@
     <title>[ DREAM PLACES ]</title>
     <meta name="description" content="Dream Places image map (Japan, Singapore, Korea, Canada, Hawaii)" />
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/moviesStyles.css">
     <link rel="stylesheet" href="styles/gallery.css">
 </head>
 
@@ -43,37 +44,24 @@
 
     <main class="landing">
         <section class="gallery-wrapper" style="max-width:1200px; margin:40px auto 120px;">
-            <h2 class="films-title" style="margin-bottom:18px;">Dream Places — click an area to open more</h2>
+            <h2 class="films-title" style="margin-bottom:18px; margin-left: 50px;">Dream Places to Visit</h2>
 
-            <!-- Image with usemap -->
             <div class="image-map-wrap" style="position:relative; max-width:1100px; margin:auto;">
-                <!-- The responsive image -->
-                <img id="dream-collage" src="images/collage.png" alt="Dream places collage" usemap="#dreammap" style="width:100%; height:auto; display:block; border:6px solid #f3efe8; box-shadow:0 10px 30px rgba(0,0,0,0.15);" />
+                <img id="dream-collage" src="images/collage_1086x724.png" alt="Dream places collage" usemap="#dreammap" style="border:6px solid #f3efe8; box-shadow:0 10px 30px rgba(0,0,0,0.15);" />
             </div>
 
-            <!-- Real <map> + <area> (semantic and required by your spec). coords are absolute pixel coords
-                 based on the source image (1536 x 1024). These areas open the same pages (new tab). -->
             <map name="dreammap">
-                <!-- Japan (rect) -->
-                <area shape="rect" coords="70,95,515,315" href="japan.html" target="_blank" rel="noopener"
-                      alt="Japan - Mount Fuji & Cherry Blossoms" title="Japan — Mount Fuji & cherry blossoms" />
-                <!-- Singapore (circle) -->
-                <area shape="circle" coords="865,205,150" href="singapore.html" target="_blank" rel="noopener"
-                      alt="Singapore - Marina Bay" title="Singapore — Marina Bay & Merlion" />
-                <!-- Korea (triangle) -->
-                <area shape="poly" coords="130,430, 370,690, 55,690" href="korea.html" target="_blank" rel="noopener"
-                      alt="Korea - Palaces & Hanok" title="Korea — Palaces, hanok & city views" />
-                <!-- Canada (pentagon) -->
-                <area shape="poly" coords="455,355,690,315,760,515,620,675,440,585" href="canada.html" target="_blank" rel="noopener"
-                      alt="Canada - Lakes & Mountains" title="Canada — Rocky Mountains & turquoise lakes" />
-                <!-- Hawaii (heptagon) -->
-                <area shape="poly" coords="820,430,1035,430,1070,610,955,715,790,650" href="hawaii.html" target="_blank" rel="noopener"
-                      alt="Hawaii - Waikiki & Diamond Head" title="Hawaii — Waikiki beach & Diamond Head" />
+                <area shape="rect" coords="73,58,469,289" href="japan.html" target="_blank" rel="noopener"
+                      alt="Japan" title="Japan" />
+                <area shape="circle" coords="852,158,124" href="singapore.html" target="_blank" rel="noopener"
+                      alt="Singapore" title="Singapore" />
+                <area shape="poly" coords="206,389,462,660,30,658" href="korea.html" target="_blank" rel="noopener"
+                      alt="Korea" title="Korea" />
+                <area shape="poly" coords="557,284,393,370,442,554,681,556,717,370" href="canada.html" target="_blank" rel="noopener"
+                      alt="Canada" title="Canada" />
+                <area shape="poly" coords="898,384,770,439,729,635,911,683,1003,650,1051,552,1029,445"  href="hawaii.html" target="_blank" rel="noopener"
+                      alt="Hawaii" title="Hawaii" />
             </map>
-
-            <p style="margin-top:18px; color:#444; font-family:var(--font-body);">
-                Tip: hover a region to see its highlight and coords. Click to open a short page about why I want to visit that place.
-            </p>
         </section>
 
         <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
